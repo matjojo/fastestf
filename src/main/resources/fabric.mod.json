@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "fastestf",
+  "version": "${version}",
+  "name": "Fastest F in the West",
+  "description": "Ever wanted to have that sweet sweet fastest F in the west? Well no you can!",
+  "authors": [
+    "Matjojo"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/fastestf/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "matjojo.main.fastestf"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "fastestf.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
