@@ -13,6 +13,10 @@ group = project.maven_group
 minecraft {
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -20,6 +24,17 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // clothconfig
+    modApi "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+    include "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+
+    // autoconfig
+    modApi "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}" // to use in dev
+    include "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}" // to include into mod jar
+
+    // modmenu integration
+    modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
 }
 
 processResources {
@@ -55,25 +70,25 @@ jar {
 }
 
 // configure the maven publication
-publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(jar) {
-				builtBy remapJar
-			}
-			artifact("${project.buildDir.absolutePath}/libs/${archivesBaseName}-${project.version}.jar"){
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
-		}
-	}
-
-	// select the repositories you want to publish to
-	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
-	}
-}
+//publishing {
+//	publications {
+//		mavenJava(MavenPublication) {
+//			// add all the jars that should be included when publishing to maven
+//			artifact(jar) {
+//				builtBy remapJar
+//			}
+//			artifact("${project.buildDir.absolutePath}/libs/${archivesBaseName}-${project.version}.jar"){
+//				builtBy remapJar
+//			}
+//			artifact(sourcesJar) {
+//				builtBy remapSourcesJar
+//			}
+//		}
+//	}
+//
+//	// select the repositories you want to publish to
+//	repositories {
+//		// uncomment to publish to the local maven
+//		// mavenLocal()
+//	}
+//}

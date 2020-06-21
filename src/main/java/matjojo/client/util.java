@@ -11,6 +11,8 @@ import net.minecraft.text.TranslatableText;
 
 public class util {
 
+	public static final String MOD_ID = "fastestf";
+
 	/**
 	 * Check if the passed message and type are part of a death message usable for died-player name checking.
 	 * @param type The MessageType sent with the Text
@@ -38,6 +40,7 @@ public class util {
 		// "death.attack.message_too_long" which takes a list of arguments,
 		// but that list is always a list of 1 Literaltext,
 		// in ServerPlayerEntity:480.
+		//noinspection RedundantIfStatement
 		if (!(translatableText.getArgs()[0] instanceof LiteralText)) {
 			return false;
 		}
@@ -61,6 +64,7 @@ public class util {
 		}
 		LiteralText diedPlayerName = (LiteralText) deathMessage.getArgs()[0];
 		LiteralText currentPlayerName = (LiteralText) clientPlayerEntity.getName();
+		//noinspection RedundantIfStatement
 		if (diedPlayerName.getRawString().equals(currentPlayerName.getRawString())) {
 			return false;
 		}

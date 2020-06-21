@@ -14,8 +14,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [],
-    "client": [],
-    "server": []
+    "client": [
+      "matjojo.client.main"
+    ],
+    "server": [],
+    "modmenu": [
+      "matjojo.client.FModmenuIntegration"
+    ]
   },
   "mixins": [
     "fastestf.mixins.json"
