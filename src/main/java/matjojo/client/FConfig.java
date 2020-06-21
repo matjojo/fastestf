@@ -6,6 +6,6 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 @Config(name = util.MOD_ID)
 public class FConfig implements ConfigData {
 
-	public String fText = "F";
+	public String fText = "F"; // TODO: make this a list and then randomChoice?
 
 }
