@@ -1,9 +1,12 @@
 {
   "required": true,
-  "package": "matjojo.main.mixin",
+  "package": "matjojo.client.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
-  "client": [],
+  "client": [
+    "detectOtherPlayerDeathChatListenerHudMixin"
+  ],
+
   "server": [],
   "injectors": {
     "defaultRequire": 1

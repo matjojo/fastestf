@@ -13,9 +13,7 @@
   "icon": "assets/fastestf/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "matjojo.main.fastestf"
-    ],
+    "main": [],
     "client": [],
     "server": []
   },
@@ -23,7 +21,6 @@
     "fastestf.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.4.0",
-    "fabric": "*"
+    "fabricloader": ">=0.4.0"
   }
 }
