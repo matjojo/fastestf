@@ -1,6 +1,5 @@
 package matjojo.client.mixin;
 
-import matjojo.client.main;
 import matjojo.client.util;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -36,7 +35,7 @@ public abstract class detectOtherPlayerDeathChatListenerHudMixin {
 		// but a message will never be added to the chat of a world outside a world
 		assert MinecraftClient.getInstance().player != null;
 		MinecraftClient.getInstance().player.networkHandler.sendPacket(
-				new ChatMessageC2SPacket(main.configData.fText)
+				new ChatMessageC2SPacket(util.getFMessage())
 		);
 	}
 }

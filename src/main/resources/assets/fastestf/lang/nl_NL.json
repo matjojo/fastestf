@@ -1,4 +1,7 @@
 {
+  "text.autoconfig.fastestf.title": "Fastest F configuratie pagina",
   "text.autoconfig.fastestf.option.fText": "F Bericht",
-  "text.autoconfig.fastestf.title": "Fastest F configuratie pagina"
+  "text.autoconfig.fastestf.option.fTextList": "Lijst met F berichten",
+  "text.autoconfig.fastestf.option.fTextList.@Tooltip[0]": "F berichten lijst. Word willekeurig uit gepakt",
+  "text.autoconfig.fastestf.option.fTextList.@Tooltip[1]": "wanneer het F Bericht tekstvak leeg is."
 }

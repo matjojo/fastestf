@@ -1,4 +1,7 @@
 {
+  "text.autoconfig.fastestf.title": "Fastest F configuration page",
   "text.autoconfig.fastestf.option.fText": "F Message",
-  "text.autoconfig.fastestf.title": "Fastest F configuration page"
+  "text.autoconfig.fastestf.option.fTextList": "F Message list",
+  "text.autoconfig.fastestf.option.fTextList.@Tooltip[0]": "F Message list, will be randomly taken from",
+  "text.autoconfig.fastestf.option.fTextList.@Tooltip[1]": "when the F Message box is empty."
 }

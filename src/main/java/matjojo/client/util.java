@@ -9,9 +9,14 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
+import java.util.List;
+import java.util.Random;
+
+
 public class util {
 
 	public static final String MOD_ID = "fastestf";
+	public static final Random random = new Random();
 
 	/**
 	 * Check if the passed message and type are part of a death message usable for died-player name checking.
@@ -69,5 +74,17 @@ public class util {
 			return false;
 		}
 		return true;
+	}
+
+	@Environment(EnvType.CLIENT)
+	public static String getFMessage() {
+		if (!"".equals(main.configData.fText)) {
+			return main.configData.fText;
+		}
+		List<String> textList = main.configData.fTextList;
+		if (textList == null || textList.isEmpty()) {
+			return "F";
+		}
+		return textList.get(random.nextInt(textList.size()));
 	}
 }
