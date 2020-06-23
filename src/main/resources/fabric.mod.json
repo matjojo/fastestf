@@ -8,7 +8,10 @@
     "Matjojo"
   ],
   "contributors": [],
-  "contact": {},
+  "contact": {
+    "homepage": "https://github.com/matjojo/fastestf",
+    "sources": "https://github.com/matjojo/fastestf",
+    "issues": "https://github.com/matjojo/fastestf/issues"},
   "license": "GPL-3.0",
   "icon": "assets/fastestf/icon.png",
   "environment": "*",
