@@ -7,7 +7,7 @@
   "authors": [
     "Matjojo"
   ],
-  "contributors": [],
+  "contributors": ["MattElek"],
   "contact": {
     "homepage": "https://github.com/matjojo/fastestf",
     "sources": "https://github.com/matjojo/fastestf",
@@ -16,11 +16,9 @@
   "icon": "assets/fastestf/icon.png",
   "environment": "client",
   "entrypoints": {
-    "main": [],
     "client": [
       "matjojo.client.main"
     ],
-    "server": [],
     "modmenu": [
       "matjojo.client.FModmenuIntegration"
     ]
@@ -29,7 +27,10 @@
     "fastestf.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.4.0",
-    "minecraft": ">=1.16.0"
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "cloth-config": "*",
+    "minecraft": ">=1.18.2",
+    "java": ">=17"
   }
 }
