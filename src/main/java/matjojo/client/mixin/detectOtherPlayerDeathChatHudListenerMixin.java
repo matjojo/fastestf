@@ -4,7 +4,7 @@ import matjojo.client.util;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.hud.ChatListenerHud;
+import net.minecraft.client.gui.hud.ChatHudListener;
 import net.minecraft.network.MessageType;
 import net.minecraft.network.packet.c2s.play.ChatMessageC2SPacket;
 import net.minecraft.text.Text;
@@ -17,13 +17,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.UUID;
 
 
-@Mixin(ChatListenerHud.class)
-public abstract class detectOtherPlayerDeathChatListenerHudMixin {
+@Mixin(ChatHudListener.class)
+public abstract class detectOtherPlayerDeathChatHudListenerMixin {
 
 	@Environment(EnvType.CLIENT)
 	@Inject(method = "onChatMessage(Lnet/minecraft/network/MessageType;Lnet/minecraft/text/Text;Ljava/util/UUID;)V",
 	at = @At(value = "HEAD"))
-	private void onChatMessageMixin(MessageType type, Text text, UUID id, CallbackInfo ci) {
+	private void onChatMessage(MessageType type, Text text, UUID id, CallbackInfo ci) {
 		if (!util.isUsableDeathMessage(type, text)) {
 			return;
 		}
